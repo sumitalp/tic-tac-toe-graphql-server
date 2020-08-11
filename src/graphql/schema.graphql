@@ -1,0 +1,52 @@
+enum Symbol {
+    NAUGHT
+    CROSS
+}
+
+type Query {
+    grid(id: ID!): Grid!
+    tictactoe: TicTacToe
+}
+
+type Mutation {
+    executeTurn(id: ID!, playerId: ID!, x: Int!, y: Int!): Grid!
+    newGame: Grid!
+}
+
+type Subscription {
+    gridUpdated(id: ID!): Grid!
+}
+
+type GridItem {
+    id: ID!
+    player: Player
+}
+
+type Player {
+    id: ID!
+    symbol: Symbol!
+}
+
+type GameUrls {
+    NAUGHT: String
+    CROSS: String
+}
+
+type Grid {
+    id: ID!
+    gridItems: [[GridItem!]!]!
+    currentPlayer: Player!
+    players: [Player]
+    winner: Player
+    isFinished: Boolean!
+    size: Int!
+    gameUrls: GameUrls!
+}
+
+type TicTacToe {
+    gamesInProgress: Int!
+    gamesFinished: Int!
+    crossWins: Int!
+    naughtWins: Int!
+    gamesDrawn: Int!
+}

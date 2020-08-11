@@ -1,0 +1,47 @@
+version: "3"
+
+services:
+  # ui:
+  #   build:
+  #     context: .
+  #     dockerfile: ./packages/tic-tac-toe-client/Dockerfile
+  #     args:
+  #       - API_URI=${API_URI}
+  #       - WS_URI=${WS_URI}
+  #   ports:
+  #     - "5000:5000"
+  #   expose:
+  #     - 5000
+  #   restart: on-failure
+  api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: on-failure
+    environment:
+      - TYPEORM_HOST=postgres
+      - TYPEORM_DATABASE=tictactoe
+      - TYPEORM_USERNAME=postgres
+      - TYPEORM_PASSWORD=postgres1234
+      - TYPEORM_SYNCHRONIZE=false
+      - TYPEORM_ENTITIES_DIR=/home/nodejs/app/build/models/**/*.js
+      - TYPEORM_MIGRATIONS_DIR=/home/nodejs/app/build/migrations/**/*.js
+      - TYPEORM_SUBSCRIBERS_DIR=/home/nodejs/app/build/subscribers/**/*.js
+    depends_on:
+      - postgres
+    ports:
+      - "4000:4000"
+    expose:
+      - 4000
+  postgres:
+    image: postgres:10.5
+    restart: on-failure
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=tictactoe
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_PASSWORD=postgres1234
+volumes:
+  pg-data:
+
