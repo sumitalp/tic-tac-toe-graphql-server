@@ -1,18 +1,6 @@
 version: "3"
 
 services:
-  # ui:
-  #   build:
-  #     context: .
-  #     dockerfile: ./packages/tic-tac-toe-client/Dockerfile
-  #     args:
-  #       - API_URI=${API_URI}
-  #       - WS_URI=${WS_URI}
-  #   ports:
-  #     - "5000:5000"
-  #   expose:
-  #     - 5000
-  #   restart: on-failure
   api:
     build:
       context: .
