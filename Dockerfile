@@ -6,6 +6,7 @@ USER node
 
 COPY --chown=node:node ./ .
 
+RUN yarn config set ignore-engines true
 RUN yarn
 
 ENV NODE_ENV=production

@@ -27,6 +27,7 @@
     "graphql": "^15.3.0",
     "graphql-tools": "^6.0.15",
     "pg": "^8.3.0",
+    "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.25",
     "verror": "^1.10.0"
   },
