@@ -1,8 +1,9 @@
 FROM node:12-alpine
 
 WORKDIR /home/nodejs/app
-RUN chown node:node .
+RUN chown -R node:node .
 USER node
+RUN chmod 755 .
 
 COPY --chown=node:node ./ .
 

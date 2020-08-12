@@ -36,23 +36,11 @@ Switch to the repo folder
 ### Install dependencies
 
 ```bash
-➜ yarn
+➜ docker
 ```
 
 ### Run
 
 ```bash
-➜ yarn dev
-```
-
-### Build
-
-```bash
-➜ yarn build
-```
-
-### Tests
-
-```bash
-➜ yarn test
+➜ docker-compose up
 ```

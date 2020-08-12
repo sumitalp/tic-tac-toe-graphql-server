@@ -2,7 +2,7 @@
     "compilerOptions": {
       /* Basic Options */
       "target": "es2017" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */,
-      "module": "system" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+      "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
       "lib": [
         "es6",
         "es2017",
@@ -13,7 +13,7 @@
       // "jsx": "preserve",                     /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
       // "declaration": true,                   /* Generates corresponding '.d.ts' file. */
       "sourceMap": true /* Generates corresponding '.map' file. */,
-      "outFile": "build",                       /* Concatenate and emit output to single file. */
+      "outDir": "build",                       /* Concatenate and emit output to single file. */
       "rootDir": "./src",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
       // "removeComments": true,                /* Do not emit comments to output. */
       // "noEmit": true,                        /* Do not emit outputs. */
