@@ -10,6 +10,12 @@ This codebase was created to demonstrate a fully fledged fullstack application b
 
 ### Install PostgreSQL
 
+### Environment Variables
+Change those accordingly
+- TYPEORM_USERNAME (default: postgres)
+- TYPEORM_PASSWORD (default: postgres1234)
+- TYPEORM_DATABASE (default: tictactoe)
+
 ### Install Node.js (12.18.0)
 
 
